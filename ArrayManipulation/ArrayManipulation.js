@@ -24,17 +24,16 @@ const arrayManipulation = (n, queries) => {
   let count = 0;
   const r = Array(n).fill(0);
   queries.forEach(a => {
-    // console.log(a);
+    console.log(a);
     r[a[0] - 1] += a[2];
     r[a[1]] -= a[2];
 
-    // console.log(r);
+    console.log(r);
   });
   r.forEach(a => {
     count += a;
     if (count > max) max = count;
   });
-  console.log(max);
   return max;
 };
 
