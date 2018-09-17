@@ -82,3 +82,9 @@ top.insertRight(18).insertRight(89);
 
 recursiveSolution(top);
 depthFirstForEach(top);
+
+module.exports = {
+  BinaryTreeNode,
+  depthFirstForEach,
+  recursiveSolution,
+};

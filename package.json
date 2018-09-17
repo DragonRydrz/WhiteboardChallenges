@@ -1,0 +1,23 @@
+{
+  "name": "WhiteboardChallenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DragonRydrz/WhiteboardChallenges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DragonRydrz/WhiteboardChallenges/issues"
+  },
+  "homepage": "https://github.com/DragonRydrz/WhiteboardChallenges#readme",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
