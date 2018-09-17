@@ -1,0 +1,9 @@
+{
+  "name": "WhiteboardChallenges",
+  "version": "1.0.0",
+  "description": "Coding challenges and tests for each",
+  "main": "index.js",
+  "repository": "https://github.com/DragonRydrz/WhiteboardChallenges.git",
+  "author": "AJ Genung <DragonRydrz@me.com>",
+  "license": "MIT"
+}
