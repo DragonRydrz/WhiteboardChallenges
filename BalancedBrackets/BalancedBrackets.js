@@ -14,6 +14,16 @@
 
 const balancedBrackets = str => {
   // Your code here
+  const brkts = { '{': '}', '(': ')', '[': ']' };
+  const q = [];
+  for (let b of str) {
+    if (brkts[b]) {
+      q.push(b);
+    } else if (q.length) {
+      b === brkts[q[q.length - 1]] ? q.pop() : null;
+    }
+  }
+  return q.length === 0;
 };
 
 // Do not alter code below.
