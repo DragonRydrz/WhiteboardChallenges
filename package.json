@@ -1,9 +1,23 @@
 {
   "name": "WhiteboardChallenges",
   "version": "1.0.0",
-  "description": "Coding challenges and tests for each",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/DragonRydrz/WhiteboardChallenges.git",
-  "author": "AJ Genung <DragonRydrz@me.com>",
-  "license": "MIT"
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DragonRydrz/WhiteboardChallenges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DragonRydrz/WhiteboardChallenges/issues"
+  },
+  "homepage": "https://github.com/DragonRydrz/WhiteboardChallenges#readme",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
 }
