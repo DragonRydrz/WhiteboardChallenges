@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DragonRydrz/WhiteboardChallenges#readme",
   "dependencies": {
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "sinon": "^6.3.4"
   }
 }

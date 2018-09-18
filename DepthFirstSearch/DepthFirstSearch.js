@@ -57,11 +57,11 @@ class BinaryTreeNode {
 
 const cb = x => console.log(x);
 
-function depthFirstForEach(node) {
+function depthFirstForEach(node, callback) {
   const q = [];
   while (node || q.length) {
     if (node) {
-      cb(node.value);
+      callback(node.value);
       if (node.right) q.push(node.right);
       node = node.left ? node.left : q.length ? q.pop() : null;
     }
@@ -69,19 +69,19 @@ function depthFirstForEach(node) {
   if (!node) return;
 }
 
-function recursiveSolution(node) {
+function recursiveSolution(node, callback) {
   // if (!node) return
-  if (node.value) cb(node.value);
-  if (node.left) recursiveSolution(node.left);
-  if (node.right) recursiveSolution(node.right);
+  if (node.value) callback(node.value);
+  if (node.left) recursiveSolution(node.left, callback);
+  if (node.right) recursiveSolution(node.right, callback);
 }
 
 const top = new BinaryTreeNode(6);
 top.insertLeft(10).insertLeft(9);
 top.insertRight(18).insertRight(89);
 
-recursiveSolution(top);
-depthFirstForEach(top);
+// recursiveSolution(top, cb);
+// depthFirstForEach(top, cb);
 
 module.exports = {
   BinaryTreeNode,
