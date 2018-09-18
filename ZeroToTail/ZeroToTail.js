@@ -9,7 +9,9 @@
 function zeroTail(arr) {
   let tail = arr.length - 1;
   for (let i = 0; i < arr.length; i++) {
+    console.log(i);
     while (arr[tail] === 0) {
+      console.log(tail);
       tail--;
     }
     if (tail <= i) return arr;
@@ -17,12 +19,11 @@ function zeroTail(arr) {
   }
   return arr;
   function swap(head, tail) {
+    console.log(head, tail);
     const t = arr[head];
     arr[head] = arr[tail];
     arr[tail] = t;
   }
 }
 
-// console.log(zeroTail([0, 1, 2, 0, 3, 0, 4, 6, 0]));
-
-module.exports = { zeroTail };
+console.log(zeroTail([0, 1, 2, 0, 3, 0, 4, 6, 0]));

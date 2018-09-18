@@ -51,6 +51,4 @@ const countVotes = arr => {
  * this can not be done any faster then O(n)
  */
 
-// console.log(countVotes(votes)); // should return 'michael'
-
-module.exports = { countVotes };
+console.log(countVotes(votes)); // should return 'michael'
