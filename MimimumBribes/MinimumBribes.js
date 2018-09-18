@@ -63,5 +63,7 @@ function minimumBribes(q) {
   return swaps;
 }
 
-console.log(minimumBribes([2, 1, 5, 3, 4]));
-console.log(minimumBribes([1, 2, 5, 3, 7, 8, 6, 4]));
+module.exports = { minimumBribes };
+
+// console.log(minimumBribes([2, 1, 5, 3, 4]));
+// console.log(minimumBribes([1, 2, 5, 3, 7, 8, 6, 4]));
