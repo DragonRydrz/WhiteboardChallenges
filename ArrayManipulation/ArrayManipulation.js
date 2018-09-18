@@ -37,6 +37,4 @@ const arrayManipulation = (n, queries) => {
   return max;
 };
 
-// console.log(arrayManipulation(5, [[1, 2, 100], [2, 5, 100], [3, 4, 100]]));
-
-module.exports = { arrayManipulation };
+console.log(arrayManipulation(5, [[1, 2, 100], [2, 5, 100], [3, 4, 100]]));
