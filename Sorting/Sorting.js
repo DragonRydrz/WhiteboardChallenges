@@ -29,9 +29,26 @@ const bubble = arr => {
 };
 
 const selection = arr => {
-  // Start at the beginning, loop thought the raminder of the array,
+  // Start at the beginning, loop thought the remainder of the array,
   // to find the lowest avaliable value, and swap it into the array
   // where it belongs. O(n^2)
+  let lowIndex = 0;
+  let lowValue;
+  let needSwap = false;
+  for (let i = 0; i < arr.length; i++) {
+    lowValue = arr[i];
+    for (let j = i; j < arr.length; j++) {
+      if (arr[j] < lowValue) {
+        lowValue = arr[j];
+        lowIndex = j;
+        needSwap = true;
+      }
+    }
+    if (needSwap) {
+      swap(arr, i, lowIndex);
+      needSwap = false;
+    }
+  }
   return arr;
 };
 
