@@ -57,6 +57,14 @@ const insertion = arr => {
   // it to each element before it, swapping with the value before
   // if it is smaller.  Once it is where it belongs, move on to
   // the next value in the array.
+  let currentIndex;
+  for (let i = 1; i < arr.length; i++) {
+    currentIndex = i;
+    while (arr[currentIndex] < arr[currentIndex - 1] && currentIndex > 0) {
+      swap(arr, currentIndex, currentIndex - 1);
+      currentIndex--;
+    }
+  }
   return arr;
 };
 
