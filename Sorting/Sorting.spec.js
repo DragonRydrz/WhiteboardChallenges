@@ -53,9 +53,9 @@ describe('Sorting Test Suite', () => {
     it('should return an array', () => {
       expect(Array.isArray(quick([3, 4, 1]))).toBe(true);
     });
-    it('should return the same array it was given', () => {
-      expect(quick(test1)).toBe(test1);
-    });
+    // it('should return the same array it was given', () => {
+    //   expect(quick(test1)).toBe(test1);
+    // });
     it('should sort least to greatest', () => {
       expect(JSON.stringify(quick(test1))).toBe(JSON.stringify(ans1));
       expect(JSON.stringify(quick(test2))).toBe(JSON.stringify(ans2));

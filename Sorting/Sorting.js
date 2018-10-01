@@ -72,7 +72,22 @@ const quick = arr => {
   // Pick a pivot, place all elements lower then it to the left,
   // higher elements to the right.  Call recursivly on each subarray.
   // concat together when only one element in the array.
-  return arr;
+  const split = array => {
+    if (array.length === 1) return array;
+    let pivot = array[0];
+    const left = [];
+    const right = [];
+    array.forEach(item => {
+      if (item <= pivot) {
+        left.push(item);
+      } else {
+        right.push(item);
+      }
+    });
+    return [...split(left), ...split(right)];
+  };
+  split(arr);
+  // return split(arr);
 };
 
 module.exports = {
