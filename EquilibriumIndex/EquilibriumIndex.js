@@ -31,9 +31,9 @@
 
   Write a function:
 
-  int solution(int A[], int N);
+  function equilibriumIndex(arr)
 
-  that, given an array A consisting of N integers, returns any of its equilibrium indices. 
+  that, given an array A , returns any of its equilibrium indices. 
   The function should return −1 if no equilibrium index exists.
 
   For example, given array A shown above, the function may return 1, 3 or 7, as explained above.
