@@ -18,6 +18,8 @@
 
 const productOfAllOtherNumbers = arr => {
   // Enter you code here
+  const totalProduct = arr.reduce((total, num) => total * num, 1);
+  return arr.map(item => totalProduct / item);
 };
 
 module.exports = { productOfAllOtherNumbers };
