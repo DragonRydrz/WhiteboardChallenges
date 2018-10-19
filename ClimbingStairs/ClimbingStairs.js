@@ -13,6 +13,15 @@
 
 const climbingStairs = n => {
   // Code here
+  let count = 0;
+  const recurse = currentStairs => {
+    if (currentStairs === n) count++;
+    for (let i = 1; i <= 3; i++) {
+      if (currentStairs + i <= n) recurse(currentStairs + i);
+    }
+  };
+  recurse(0);
+  return count;
 };
 
 // Do not alter anything below this comment
