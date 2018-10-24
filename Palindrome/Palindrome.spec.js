@@ -1,4 +1,4 @@
-import palindrome from './Palindrome';
+const { palindrome } = require('./Palindrome');
 
 describe('Palindrome testing suite', () => {
   it('should return a boolean', () => {
