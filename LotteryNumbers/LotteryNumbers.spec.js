@@ -47,6 +47,6 @@ describe('Lottery Numbers Testing Suite', () => {
     }
   });
   it('should return the correct results', () => {
-    expect(checkNumbers(yourNumbers, results).length).toStrictEqual(answer);
+    expect(checkNumbers(yourNumbers, results)).toStrictEqual(answer);
   });
 });
