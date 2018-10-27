@@ -15,6 +15,10 @@
   const c = new ListNode(3);
   const d = new ListNode(2);
   const e = new ListNode(1);
+  a.next = b;
+  b.next = c;
+  c.next = d;
+  d.next = e;
 
   isLinkedListPalindrome(a);   // should return true
   isLinkedListPalindrome(b);   // should return false since now the 'a' node is not included in the linked list
@@ -23,6 +27,16 @@
 
 const isLinkedListPalindrome = list => {
   // Your code here
+  const arrayOfList = [];
+  let currentNode = list;
+  while (currentNode) {
+    arrayOfList.push(currentNode.value);
+    console.log(currentNode.next);
+    currentNode = currentNode.next;
+  }
+  let reversedList = [...arrayOfList].reverse();
+  console.log(arrayOfList);
+  return JSON.stringify(arrayOfList) === JSON.stringify(reversedList);
 };
 
 // Do not modify code below this comment
