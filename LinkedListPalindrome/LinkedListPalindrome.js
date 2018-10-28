@@ -31,11 +31,9 @@ const isLinkedListPalindrome = list => {
   let currentNode = list;
   while (currentNode) {
     arrayOfList.push(currentNode.value);
-    console.log(currentNode.next);
     currentNode = currentNode.next;
   }
   let reversedList = [...arrayOfList].reverse();
-  console.log(arrayOfList);
   return JSON.stringify(arrayOfList) === JSON.stringify(reversedList);
 };
 
