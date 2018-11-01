@@ -2,9 +2,10 @@
 
 const palindrome = str => {
   // Code here
+  const noSpaces = str.replace(/\s/g, '');
   return (
-    str ===
-    str
+    noSpaces ===
+    noSpaces
       .split('')
       .reverse()
       .join('')
