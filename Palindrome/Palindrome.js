@@ -1,10 +1,13 @@
 //  Check to see if a string is a palindrome.  return true or false
+//  Ignore spaces.
+//  'taco cat' should return true.
 
 const palindrome = str => {
   // Code here
+  const noSpaces = str.replace(/\s/g, '');
   return (
-    str ===
-    str
+    noSpaces ===
+    noSpaces
       .split('')
       .reverse()
       .join('')

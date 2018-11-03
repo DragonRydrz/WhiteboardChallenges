@@ -8,6 +8,9 @@ describe('Palindrome testing suite', () => {
     expect(palindrome('tacocat')).toBe(true);
   });
   it('should return false', () => {
-    expect(palindrome('taco cat')).toBe(false);
+    expect(palindrome('taco cat')).toBe(true);
+  });
+  it('should return false', () => {
+    expect(palindrome('this is not a palindrome')).toBeFalsy();
   });
 });
