@@ -15,7 +15,7 @@
   Analyze the time and space complexity of the methods in your solution.
 */
 
-export class TempTracker {
+class TempTracker {
   // Code Here
   constructor() {
     this.tracker = Array(141).fill(0);
@@ -38,7 +38,7 @@ export class TempTracker {
 
     this.min = this.min === null ? temp : Math.min(temp, this.min);
     this.max = Math.max(temp, this.max);
-    this.mean = (this.total / this.count).toFixed(2);
+    this.mean = this.total / this.count;
 
     this.mode =
       this.mode === null
@@ -61,3 +61,6 @@ export class TempTracker {
     return this.mean;
   }
 }
+
+// Do not modify code below this comment
+module.exports = { TempTracker };
