@@ -14,7 +14,12 @@
 
 const rockPaperScissors = n => {
   // Your code here
-}
+  const arr = ['rock', 'paper', 'scissor'];
+  const rv = [];
+  let current = [];
+
+  return rv;
+};
 
 // Do not alter code below this line
-module.exports = { rockPaperScissors }
+module.exports = { rockPaperScissors };
