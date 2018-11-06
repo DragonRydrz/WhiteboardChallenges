@@ -18,6 +18,16 @@ const rockPaperScissors = n => {
   const rv = [];
   let current = [];
 
+  const build = (roundsLeft, result) => {
+    if (!roundsLeft) {
+      rv.push(result);
+      return;
+    }
+    arr.forEach(play => {
+      build(roundsLeft - 1, result.concat(play));
+    });
+  };
+  build(n, []);
   return rv;
 };
 
