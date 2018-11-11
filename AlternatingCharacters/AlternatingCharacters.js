@@ -14,7 +14,19 @@
 
 const alternatingCharacters = str => {
   // Your code here
-}
+  let firstCharacter = str[0];
+  let secondCharacter;
+  let deleted = 0;
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] === firstCharacter) {
+      deleted++;
+    } else {
+      secondCharacter = firstCharacter;
+      firstCharacter = str[i];
+    }
+  }
+  return deleted;
+};
 
 // Do not modify code below this line
-module.exports = { alternatingCharacters }
+module.exports = { alternatingCharacters };
