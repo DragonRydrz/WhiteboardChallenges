@@ -15,6 +15,42 @@
 
 const reverseLinkedList = node => {
   // Your code here
+
+  // Recursive builds a new Linked List
+
+  function buildReverse(head, next = null) {
+    // console.log(head);
+    // console.log(next);
+
+    if (!head) {
+      return next;
+    }
+
+    const newNode = new ListNode(head.value);
+    newNode.next = next;
+    return buildReverse(head.next, newNode);
+  }
+
+  const cache = buildReverse(node, null);
+  return cache;
+
+  // Iterative Mutates existing Linked List
+  // Comment out lines 21 through 35 to run the code below
+
+  let current = node;
+  let nextNode = null;
+  let prevNode = null;
+
+  while (current) {
+    nextNode = current.next;
+
+    current.next = prevNode;
+
+    prevNode = current;
+    current = nextNode;
+  }
+
+  return prevNode;
 };
 
 // Do not modify code below this comment
@@ -25,5 +61,8 @@ class ListNode {
     this.next = null;
   }
 }
-
+const test2 = new ListNode(1);
+test2.next = new ListNode(2);
+test2.next.next = new ListNode(3);
+reverseLinkedList(test2);
 module.exports = { ListNode, reverseLinkedList };
