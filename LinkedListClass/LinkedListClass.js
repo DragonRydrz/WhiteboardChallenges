@@ -6,6 +6,7 @@
 
 class LinkedList {
   constructor(value) {
+    // Head property required
     // Your code here
   }
 
