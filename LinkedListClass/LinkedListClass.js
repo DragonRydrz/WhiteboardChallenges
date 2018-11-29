@@ -9,9 +9,14 @@ class LinkedList {
     // Head property required
     // Your code here
     this.head = new Node(value);
+    this.addToHead = this.addToHead.bind(this);
+    this.addToTail = this.addToTail.bind(this);
+    this.removeFromHead = this.removeFromHead.bind(this);
+    this.removeFromTail = this.removeFromTail.bind(this);
+    this.lengthOf = this.lengthOf.bind(this);
   }
 
-  addToHead = value => {
+  addToHead(value) {
     // Add new Node to the head
     // Your code here
     if (!this.head) {
@@ -20,9 +25,9 @@ class LinkedList {
     }
     const newNode = new Node(value, this.head);
     this.head = newNode;
-  };
+  }
 
-  addToTail = value => {
+  addToTail(value) {
     // Add new Node to the tail
     // Your code here
     const newNode = new Node(value);
@@ -35,18 +40,18 @@ class LinkedList {
       }
       current.next = newNode;
     }
-  };
+  }
 
-  removeFromHead = () => {
+  removeFromHead() {
     // Remove the node from the head
     // Your code here
     if (!this.head) return;
     const cache = this.head;
     this.head = this.head.next;
     return cache;
-  };
+  }
 
-  removeFromTail = () => {
+  removeFromTail() {
     // Remove the node from the tail
     // Your code here
     if (!this.head.next) this.removeFromHead();
@@ -57,9 +62,9 @@ class LinkedList {
     const cache = current.next;
     current.next = null;
     return cache;
-  };
+  }
 
-  length = () => {
+  lengthOf() {
     // Return the total number of nodes in the linked list
     // Your Code Here
     let counter = 0;
@@ -69,7 +74,7 @@ class LinkedList {
       current = current.next;
     }
     return counter;
-  };
+  }
 }
 
 class Node {
