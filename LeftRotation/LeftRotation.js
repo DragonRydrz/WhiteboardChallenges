@@ -8,8 +8,10 @@
   the output should be [4,5,1,2,3]
 */
 
-const leftRotation = () => {
+const leftRotation = (arr, n) => {
   // Your code here
+  return [...arr.slice(n), ...arr.slice(0, n)];
 };
 
+// Do not modify code below this comment
 module.exports = { leftRotation };
