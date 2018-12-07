@@ -10,6 +10,29 @@
 
 function oneLetterDifference() {
   // Your code here
+  let no = 0;
+  let good = '';
+  for (let i = 0; i < arr.length; i++) {
+    const first = arr[i];
+
+    for (let j = 0; j < arr.length; j++) {
+      const second = arr[j];
+      good = '';
+      no = 0;
+      for (let x = 0; x < second.length; x++) {
+        if (first[x] !== second[x]) {
+          no++;
+        } else {
+          good += first[x];
+        }
+        if (no > 1) break;
+        if (x === second.length - 1 && no === 1) {
+          return good;
+        }
+      }
+    }
+  }
+  return false;
 }
 
 // Do not modify code below this line
