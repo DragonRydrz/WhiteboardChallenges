@@ -8,7 +8,7 @@
   If none exist, return false.
 */
 
-function oneLetterDifference() {
+function oneLetterDifference(arr) {
   // Your code here
   let no = 0;
   let good = '';
