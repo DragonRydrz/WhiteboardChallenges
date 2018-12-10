@@ -7,6 +7,16 @@
 
 function canBePalindrome(str) {
   // Your code here
+  const track = {};
+  for (let i = 0; i < str.length; i++) {
+    if (!track[str[i]]) track[str[i]] = 0;
+    ++track[str[i]];
+  }
+  let oddCount = 0;
+  for (let n in track) {
+    if (track[n] % 2 === 1) oddCount++;
+  }
+  return oddCount < 2;
 }
 
 // Do not modify code below this comment

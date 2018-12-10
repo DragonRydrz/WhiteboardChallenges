@@ -8,6 +8,6 @@ describe('Can Be Palindrome Testing Suite', () => {
     expect(canBePalindrome('aaabbeedd')).toBe(true);
   });
   it('should return true', () => {
-    expect(canBePalindrome('aaabbb')).toBe(true);
+    expect(canBePalindrome('aaabbb')).toBe(false);
   });
 });
